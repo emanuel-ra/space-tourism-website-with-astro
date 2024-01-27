@@ -1,8 +1,8 @@
 ---
-import Body from "../components/Body.astro";
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
-
+import Body from "../../components/Body.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import { Destination } from "../../components/Destination/index"
 ---
 
 <Layout title="Welcome to Soace Tourism Website">
@@ -14,7 +14,7 @@ import Layout from "../layouts/Layout.astro";
   `}>
     <Header />
     <Body className="flex items-center text-white h-dvh">
-        
+      <Destination /> 
     </Body>
   </main>
 </Layout>
