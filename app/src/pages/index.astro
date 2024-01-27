@@ -1,0 +1,40 @@
+---
+import Body from "../components/Body.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Welcome to Soace Tourism Website">
+  <main class={`w-[375px] md:w-[768px] lg:w-[1440px] overflow-hidden
+    [max-w-[390px]]:bg-[url('./images/home/background-home-mobile.jpg')]
+    max-lg:bg-[url('./images/home/background-home-tablet.jpg')]
+    xl:bg-[url('./images/home/background-home-desktop.jpg')]
+    bg-cover
+  `}>
+    <Header />
+    <Body className="flex flex-col lg:flex-row items-center text-white h-dvh">
+        <article class="w-full text-center lg:text-left md:px-20 lg:w-1/2 animate-fade-right animate-once animate-ease-in-out">
+            
+          <span class="span-title text-xl md:text-3xl text-white/90">So, you want to travel to</span>
+          <h1 class="uppercase text-[100px] md:text-[150px]">Space</h1>
+          <blockquote class="text-pretty text-lg">
+            Let’s face it; if you want to go to space, you might as well genuinely go to 
+            outer space and not hover kind of on the edge of it. Well sit back, and relax 
+            because we’ll give you a truly out of this world experience!
+          </blockquote>
+
+        </article>
+        <article class="flex justify-center items-center w-1/2 h-1/2 animate-fade-left animate-once animate-ease-in-out ">
+          <button class="bg-white rounded-full w-48 h-48 text-black/90 text-3xl hover:scale-150 transition hover:bg-white/90 hover:border-white">
+            Explore
+          </button>
+        </article>
+    </Body>
+  </main>
+</Layout>
+<style>
+  .span-title{    
+    letter-spacing: 4.75px;
+  }
+</style>

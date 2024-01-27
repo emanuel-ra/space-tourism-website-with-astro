@@ -1,0 +1,26 @@
+---
+import Body from "../components/Body.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Welcome to Soace Tourism Website">
+  <main class={`w-[375px] md:w-[768px] lg:w-[1440px] overflow-hidden
+    [max-w-[390px]]:bg-[url('./images/destination/background-destination-mobile.jpg')]
+    max-lg:bg-[url('./images/destination/background-destination-tablet.jpg')]
+    xl:bg-[url('./images/destination/background-destination-desktop.jpg')]
+    bg-cover
+  `}>
+    <Header />
+    <Body className="flex items-center text-white h-dvh">
+        
+    </Body>
+  </main>
+</Layout>
+<style>
+  .span-title{
+    font-size: 28px;
+    letter-spacing: 4.75px;
+  }
+</style>

@@ -1,0 +1,16 @@
+---
+interface Props {
+    label:string
+    url:string
+}
+const { label, url } = Astro.props
+---
+<li class="navlink h-full flex justify-center items-center transition-all hover:border-b-2 hover:border-b-white">
+    <a href={url}>{label}</a>
+</li>
+<style>
+    .navlink {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+</style>
