@@ -45,8 +45,9 @@ const Information = ({
       <article className="lg:w-1/3 flex flex-col max-md:items-center max-lg:gap-2 lg:gap-4 uppercase animate-fade-left animate-ease-in-out transition">
         <nav>
           <ul className="flex gap-2 uppercase text-white/70  ">
-            {planets.map((option) => (
+            {planets.map((option, index) => (
               <li
+                key={index}
                 className={`hover:text-white hover:border-b-2 hover:border-white transition
                 ${
                   option.title === planet.title

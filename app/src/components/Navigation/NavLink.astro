@@ -3,10 +3,14 @@ interface Props {
     label:string
     url:string
 }
+const currentPath = Astro.url.pathname;
 const { label, url } = Astro.props
 ---
-<li class="navlink h-full flex justify-center items-center transition-all hover:border-b-2 hover:border-b-white">
-    <a href={url}>{label}</a>
+<li class={`navlink h-full flex justify-center items-center transition-all hover:border-b-2 hover:border-b-white
+ ${currentPath==url ? 'border-b-2 border-b-white':''} 
+`}>
+    <a transition:animate="fade" href={url}>{label}</a>
+    
 </li>
 <style>
     .navlink {
