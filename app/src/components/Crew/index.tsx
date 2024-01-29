@@ -26,15 +26,24 @@ const Crew = ({
   return (
     <article className="flex max-lg:flex-col max-lg:gap-3">
       <div className="flex flex-col max-lg:order-last lg:w-1/2 max-lg:items-center justify-around gap-y-4 animate-fade-right animate-ease-in-out transition">
-        <div className="max-lg:order-2 flex flex-col  gap-y-3">
-          <h2 className="text-4xl text-white/70 uppercase">{crew.role}</h2>
-          <h3 className="text-5xl uppercase">{crew.name}</h3>
-          <blockquote className="text-balance">{crew.bio}</blockquote>
+        <div className="max-lg:order-2 flex flex-col gap-y-3 max-lg:text-center">
+          <h2 className="text-2xl md:text-4xl text-white/70 uppercase">
+            {crew.role}
+          </h2>
+          <h3 className="text-2xl lg:text-5xl uppercase">{crew.name}</h3>
+          <blockquote className="text-pretty">{crew.bio}</blockquote>
         </div>
         {children}
       </div>
-      <div className="w-full flex justify-center max-lg:border-b max-lg:border-white/70 animate-fade-left animate-ease-in-out transition">
-        <img src={crew.images.webp} alt={crew.name} className="max-lg:w-1/2" />
+      <div
+        className={`w-full flex justify-center max-lg:border-b max-lg:border-white/70 animate-fade-left animate-ease-in-out transition 
+      max-md:max-h-[300px] max-lg:max-h-[500px]`}
+      >
+        <img
+          src={crew.images.webp}
+          alt={crew.name}
+          className="object-fit transition "
+        />
       </div>
     </article>
   );
