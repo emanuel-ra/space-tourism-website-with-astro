@@ -2,23 +2,22 @@
 import LogoIcon from "../icons/Logo.astro"
 import NavLink from "./NavLink.astro"
 import { ToggleSideNav } from "../Navigation/ToggleSideNav"
-import { SideNavbar } from "../Navigation/SideNavBar"
 ---
 
 <nav class={`relative flex justify-between h-20`}>
-    <div class="hidden absolute lg:block w-2/5 top-1/2 left-52 z-10 bg-white/25 backdrop-blur-sm h-[2px]"></div>
-    <div class="flex items-center ml-10 h-full 1/2 lg:w-2/4">
-      <a href="/">
-        <LogoIcon />
-      </a>
-    </div>
+  <div class="hidden absolute lg:block w-2/5 top-1/2 left-52 z-10 bg-white/25 backdrop-blur-sm h-[2px]"></div>
+  <div class="flex items-center ml-10 h-full lg:w-2/4">
+    <a href="/">
+      <LogoIcon />
+    </a>
+  </div>
   <ul class="hidden md:flex justify-center gap-4 text-lg px-4 lg:grow text-white bg-white/10 lg:bg-white/25 lg:backdrop-blur-sm uppercase">
     <NavLink url="/" label="00 Home" />
     <NavLink url="/destination" label="01 Destination" />
     <NavLink url="/crew" label="02 Crew" />
     <NavLink url="/technology" label="03 Technology" />
   </ul>
-  <div class="pr-5 flex justify-center items-center">
+  <div class="pr-5 md:hidden flex justify-center items-center">
     <ToggleSideNav client:load />
   </div>
 </nav>
