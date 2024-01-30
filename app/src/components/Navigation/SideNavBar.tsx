@@ -6,16 +6,18 @@ export const SideNavbar = () => {
 
   useEffect(() => {
     const element = document.getElementById("sideNavBar");
-    element?.classList.toggle("hidden");
+    if (open) {
+      element?.classList.remove("hidden");
+    } else {
+      element?.classList.add("hidden");
+    }
   }, [open]);
 
   return (
     <>
       <div
         id="sideNavBar"
-        className={`md:hidden w-2/3 h-dvh absolute -top-0 -right-0 bg-white/25  backdrop-blur-lg hidden transition ease-in-out
-            
-        `}
+        className={`md:hidden w-2/3 h-dvh absolute -top-0 -right-0 bg-white/25  backdrop-blur-lg hidden transition ease-in-out`}
       >
         <section className="flex justify-end py-8 px-10">
           <button onClick={() => setOpen()}>
@@ -27,6 +29,7 @@ export const SideNavbar = () => {
             </svg>
           </button>
         </section>
+
         <ul className="px-10 flex flex-col gap-y-5 text-white font-semibold uppercase tracking-wide	">
           <SideNavbarLink url="/" label="00 Home" />
           <SideNavbarLink url="/destination" label="01 Destination" />
