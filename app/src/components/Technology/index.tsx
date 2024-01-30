@@ -70,7 +70,13 @@ const Buttons = ({
   handle,
   select,
 }: {
-  handle: (technology: Technology) => void;
+  handle: ({
+    technology,
+    select,
+  }: {
+    technology: Technology;
+    select: number;
+  }) => void;
   select: number;
 }) => {
   return (
