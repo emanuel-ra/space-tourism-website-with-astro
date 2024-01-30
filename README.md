@@ -27,6 +27,11 @@ Users should be able to:
 - View each page and be able to toggle between the tabs to see new information
 
 ### Screenshot
+![Design preview for the Space tourism website coding challenge](./preview.jpg)
+
+<img src="./desktop-ui.gif" />
+<img src="./tablet.gif" />
+<img src="./mobile-ui.gif" width="150" />
 
 ![](./screenshot.jpg)
 
