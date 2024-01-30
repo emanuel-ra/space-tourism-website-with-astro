@@ -6,6 +6,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Run Locally](#run-locally)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -22,6 +23,31 @@ Users should be able to:
 - View the optimal layout for each of the website's pages depending on their device's screen size
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
+
+## Run Locally  
+Clone the project  
+
+~~~bash  
+  git clone git@github.com:emanuel-ra/space-tourism-website-with-astro.git
+~~~
+
+Go to the project directory  
+
+~~~bash  
+  cd app
+~~~
+
+Install dependencies  
+
+~~~bash  
+pnpm install
+~~~
+
+Start the server  
+
+~~~bash  
+pnpm run dev
+~~~  
 
 ### Screenshot
 <img src="./desktop-ui.gif" alt="Desktop Space tourism website" />
