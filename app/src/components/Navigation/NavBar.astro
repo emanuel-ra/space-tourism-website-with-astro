@@ -1,8 +1,8 @@
 ---
 import LogoIcon from "../icons/Logo.astro"
-import HamburgerIcon from "../icons/Hamburger.astro"
 import NavLink from "./NavLink.astro"
-
+import { ToggleSideNav } from "../Navigation/ToggleSideNav"
+import { SideNavbar } from "../Navigation/SideNavBar"
 ---
 
 <nav class={`relative flex justify-between h-20`}>
@@ -18,7 +18,5 @@ import NavLink from "./NavLink.astro"
     <NavLink url="/crew" label="02 Crew" />
     <NavLink url="/technology" label="03 Technology" />
   </ul>
-  <ul class="md:hidden">
-    <HamburgerIcon />
-  </ul>
+  <ToggleSideNav client:load />
 </nav>
