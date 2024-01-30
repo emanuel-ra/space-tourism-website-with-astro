@@ -2,18 +2,21 @@
 import Body from "../../components/Body.astro";
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
+import { Technologies } from "../../components/Technology/index"
+
 ---
 
 <Layout title="Welcome to Soace Tourism Website">
   <main class={`w-[375px] md:w-[768px] lg:w-[1440px] overflow-hidden
-    [max-w-[390px]]:bg-[url('./images/technology/background-technology-mobile.jpg')]
-    max-lg:bg-[url('./images/technology/background-technology-tablet.jpg')]
-    xl:bg-[url('./images/technology/background-technology-desktop.jpg')]
+    [max-w-[390px]]:bg-[url('https://eloquent-moxie-e2e409.netlify.app/images/technology/background-technology-mobile.jpg')]
+    max-lg:bg-[url('https://eloquent-moxie-e2e409.netlify.app/images/technology/background-technology-tablet.jpg')]
+    xl:bg-[url('https://eloquent-moxie-e2e409.netlify.app/images/technology/background-technology-desktop.jpg')]
     bg-cover
   `}>
     <Header />
-    <Body className="flex flex-col px-10 lg:gap-10 lg:px-20 text-white h-dvh">      
-      <h1 class="text-base max-md:text-center md:text-4xl detination-title mb-5"><span class="text-white/70">03</span> Space launch 101</h1>
+    <Body className="flex flex-col lg:gap-10 lg:pl-44 text-white h-dvh">      
+      <h1 class="text-base max-md:text-center md:pl-10 md:text-4xl detination-title mb-5"><span class="text-white/70">03</span> Space launch 101</h1>
+      <Technologies client:load />
     </Body>
   </main>
 </Layout>
