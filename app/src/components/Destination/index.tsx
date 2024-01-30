@@ -56,14 +56,14 @@ const Information = ({
                 }
                 `}
               >
-                <a
-                  href={`#`}
+                <button
+                  className="uppercase"
                   onClick={() => {
                     handler(option);
                   }}
                 >
                   {option.title}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
